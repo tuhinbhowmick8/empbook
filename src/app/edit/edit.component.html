@@ -1,0 +1,85 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-primary" aria-label="Fourth navbar example">
+    <div class="container-fluid">
+  
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04"
+        aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav me-auto mb-2 mb-md-">
+          <li class="nav-item">
+            <button type="button" (click)="exit()" class="btn btn-success active " aria-current="page">Home</button>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn btn-danger logout " (click)="logout()">Logout</button>
+          </li>
+        </ul>
+  
+      </div>
+    </div>
+  </nav>
+  
+  
+  <div class="login-wrapper">
+    <div class="card">
+      <div class="card-body">
+  
+        <form>
+         <div *ngIf="this.action == 'edit';then edit else new"></div>
+        <ng-template #edit>
+          <h1 class="h3 mb-3 fw-normal">Edit User Details</h1>
+        </ng-template>
+
+         <ng-template #new>
+          <h1 class="h3 mb-3 fw-normal" id="adduserdetails">Add User Details</h1>
+         </ng-template>
+          
+          <!-- <div class="form-floating">
+          <input type="text" name="id" [(ngModel)]="data.id" class="form-control" id="floatingInput"
+          placeholder="Jhon Wick" (keypress)="numberOnly($event)" maxlength="2">
+          <label for="floatingInput">Employee Id</label>
+        </div> -->
+  
+          <div class="form-floating">
+            <input type="text" name="name" [(ngModel)]="data.name" class="form-control" id="floatingInput"
+              placeholder="Jhon Wick">
+            <label for="floatingInput">Name</label>
+          </div>
+          <div class="form-floating">
+            <input type="email" name="designation" [(ngModel)]="data.designation" class="form-control" id="floatingInput"
+              placeholder="Tester">
+            <label for="floatingInput">Designation</label>
+          </div>
+          <div class="form-floating">
+            <input type="text" name="department" [(ngModel)]="data.department" class="form-control" id="floatingInput"
+              placeholder="Finance">
+            <label for="floatingInput">Department</label>
+          </div>
+          <div class="form-floating">
+            <input type="text" name="mobile" [(ngModel)]="data.mobile" class="form-control" id="floatingInput"
+              placeholder=9876543210 (keypress)="numberOnly($event)" maxlength="10">
+            <label for="floatingInput">Mobile</label>
+          </div>
+          <div class="form-floating">
+              <select class="form-select" aria-label="Default select example"
+               name="gender" [(ngModel)]="data.gender" >
+               <option [ngValue]="''" selected  disabled>Gender</option>
+                <option [ngValue]="'Male'">Male</option>
+                <option [ngValue]="'Female'">Female</option>
+                <option [ngValue]="'Others'">Others</option>
+             </select>
+          </div>
+  
+  
+          <div *ngIf="this.action == 'edit'; then editUser else newUser"></div>
+            <ng-template #editUser>
+            <button (click)="edit_user()" class="w-100 btn btn-lg btn-primary" type="submit" >Edit User</button>
+            </ng-template>
+            <ng-template #newUser>
+            <button (click)="newUserEntry()" class="w-100 btn btn-lg btn-primary" type="submit" >Add User</button>
+            </ng-template>
+   </form>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,49 @@
+*{
+    color: rgb(8, 78, 243);
+    font-size: 16px;
+}
+.logout{
+    position: absolute;
+    right: 10px;
+}
+.hero{
+    text-align: center;
+    color: lightslategray;
+    margin-top: 20px;
+}
+table{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+table, th, td {
+    border: 1px solid rgb(53, 4, 247);
+    border-collapse: collapse;
+    text-align: center;
+    padding: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+   
+  }
+
+  
+  th, td {
+    background-color: #ffffff;
+    
+  }
+
+.container{
+    margin-top: 20px;
+    padding-left: 120px;
+    padding-right: 120px;
+    
+}
+
+list{
+    text-align: center;
+}
+
+
+
+
+
+

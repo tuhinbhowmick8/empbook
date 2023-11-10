@@ -1,0 +1,19 @@
+.login-wrapper{
+    margin: 20px auto;
+    width: 450px;
+}
+
+input{
+    margin-bottom: 15px;
+}
+
+.logout{
+    position: absolute;
+    right: 10px;
+
+}
+
+
+button{
+    margin-top: 16px;
+}
